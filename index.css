@@ -1,8 +1,9 @@
 /*-------Navigation Bar-------*/
 .nav{
     /* Background*/
-    overflow: hidden;
     border:1px black solid;
+    position: fixed;
+    width: 100%;
 }
 .nav a{
     /* Styling*/
@@ -22,14 +23,14 @@
     display: none;
 }
 /*---------Media Queries---------*/
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .nav a:not(:first-child) {display: none;}
     .nav a.icon {
       float: right;
       display: block;
     }
   }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .nav.responsive {position: relative;}
     .nav.responsive a.icon {
       position: absolute;
@@ -49,7 +50,13 @@ body, html{
     height: 100%;
 }
 /*-----Parallax Effect---------*/
-.bg1{
+.bg{
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.img1{
     background-image: url("Materials/profile.jpg");
-    
 }
