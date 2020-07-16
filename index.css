@@ -1,0 +1,55 @@
+/*-------Navigation Bar-------*/
+.nav{
+    /* Background*/
+    overflow: hidden;
+    border:1px black solid;
+}
+.nav a{
+    /* Styling*/
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 19.6px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav a:hover {
+    /* Changing color of link*/
+    color: red;
+}
+.nav .icon{
+    display: none;
+}
+/*---------Media Queries---------*/
+@media screen and (max-width: 700px) {
+    .nav a:not(:first-child) {display: none;}
+    .nav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+@media screen and (max-width: 700px) {
+    .nav.responsive {position: relative;}
+    .nav.responsive a.icon {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .nav.responsive a{
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+/*-----------For all------------*/
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+/*-----Parallax Effect---------*/
+.bg1{
+    background-image: url("Materials/profile.jpg");
+    
+}
