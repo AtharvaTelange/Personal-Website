@@ -1,9 +1,13 @@
 /*-------Navigation Bar-------*/
 .nav{
     /* Background*/
+    overflow: hidden;
+    background-color: teal;
     border:1px black solid;
+    top: 0;
     position: fixed;
     width: 100%;
+    z-index: 300;
 }
 .nav a{
     /* Styling*/
@@ -18,6 +22,7 @@
 .nav a:hover {
     /* Changing color of link*/
     color: red;
+    background-color: thistle;
 }
 .nav .icon{
     display: none;
@@ -44,32 +49,39 @@
     }
   }
 /*-----------For all------------*/
+body::-webkit-scrollbar { 
+    display: none; 
+}
 body, html{
     margin: 0;
     padding: 0;
     height: 100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 /*-----Parallax Effect---------*/
 .bg{
     height: 100%;
     background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
     background-size: cover;
+    display: table;
 }
 .img1{
     background-image: url("Materials/profile.jpg");
+}
+.img2{
+    background-image: url("Materials/Hobbies.jpg");
 }
 /*----------Homepage------------*/
 .Intro{
     border: 10px white solid;
     width: fit-content;
-    position: relative;
-    top: 20%;
     margin: auto;
     padding: 10px 20px;
     font-size: 2vw;
+    margin-top: 15%;
     border-radius: 10px;
     text-align: center;
 }
@@ -97,6 +109,32 @@ body, html{
     opacity: 0.5;
     width: 99.90%;
 }
+/*----Placing text in image-----*/
+#AboutMe .column .info{
+    border: 10px whitesmoke solid;
+    position: relative;
+    text-align: center;
+    top: -60%;
+    width: 40vw;
+    margin: auto;
+    padding: 20px;
+    color: whitesmoke;
+    font-size: 20px;
+}
+#AboutMe .column .info a{
+    border: 2px whitesmoke solid;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: white;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+#AboutMe .column .info a:hover {
+    background-color: #4CAF50;
+    color: black;
+}
+/*-------Media Queries for About Me-------*/
 @media screen and (max-width: 1300px) {
     #AboutMe .column{
       width:100%; /* The width is 100%, when the viewport is 800px or smaller */
@@ -104,5 +142,38 @@ body, html{
     #AboutMe .infoimg{
         width: 100%;
     }
+    #AboutMe .column .info{
+        width: 60vw;
+        padding: 50px 30px;
+        top: -70%; 
+    }
 }
+/*-------------Hobbies------------------*/
+#Hobbies .col{
+    width: 33.33%;
+    float: left;
+    padding: 0px 5px;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 10%;
+}
+#Hobbies .card{
+    border: 1px white solid;
+    width: 300px;
+    margin: auto;
+}
+.card h3{
+    text-align: center;
+    background-color: thistle;
+    margin: 0;
+}
+.card img{
+    width: 300px;
+}
+@media screen and (max-width: 1000px) {
+    #Hobbies .col{
+      width: 100%;
+      display: block;
+    }
+  }
 
