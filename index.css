@@ -22,8 +22,8 @@
 .nav .icon{
     display: none;
 }
-/*---------Media Queries---------*/
-@media screen and (max-width: 600px) {
+/*---------Media Queries for Navigation Bar---------*/
+@media screen and (max-width: 620px) {
     .nav a:not(:first-child) {display: none;}
     .nav a.icon {
       float: right;
@@ -48,6 +48,7 @@ body, html{
     margin: 0;
     padding: 0;
     height: 100%;
+    box-sizing: border-box;
 }
 /*-----Parallax Effect---------*/
 .bg{
@@ -60,3 +61,48 @@ body, html{
 .img1{
     background-image: url("Materials/profile.jpg");
 }
+/*----------Homepage------------*/
+.Intro{
+    border: 10px white solid;
+    width: fit-content;
+    position: relative;
+    top: 20%;
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 2vw;
+    border-radius: 10px;
+    text-align: center;
+}
+/*--------About Me------------*/
+#AboutMe .column{
+    width: 50%;
+    float: left;
+    height: 500px;
+    background-color: black;
+}
+#AboutMe .column img{
+    display: block;
+    margin: auto;
+}
+#AboutMe .profile{
+    position: relative;
+    top: 5%;
+    width: 400px;
+    height: 400px;
+    padding: 20px 0px;
+    border-radius: 100%;
+}
+#AboutMe .infoimg{
+    height: 500px;
+    opacity: 0.5;
+    width: 99.90%;
+}
+@media screen and (max-width: 1300px) {
+    #AboutMe .column{
+      width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+    #AboutMe .infoimg{
+        width: 100%;
+    }
+}
+
