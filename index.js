@@ -1,3 +1,4 @@
+//Navigation
 function vert() {
     var x = document.getElementById("navigation");
     if (x.className === "nav") {
@@ -7,3 +8,4 @@ function vert() {
       x.className = "nav";
     }
   }
+//Slideshow
