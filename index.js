@@ -8,4 +8,4 @@ function vert() {
       x.className = "nav";
     }
   }
-//Slideshow
+
